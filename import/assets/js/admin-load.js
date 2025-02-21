@@ -1057,6 +1057,7 @@ var ZCompanionSSEImport = {
 				data : {
 					action          : 'zita-site-library-import-customizer',
 					customizer_data : ZCompanionTemplateAdmin.customizer_data,
+					security: zCompanionAdmin.z_companion_zc_ajax_nonce
 				},
 				beforeSend: function() {
 			$('.button-hero.zita-demo-import').text( zCompanionAdmin.unique.importCustomizer );
