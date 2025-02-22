@@ -30,10 +30,7 @@ class ThemeHunk_Notify{
 		wp_enqueue_style( 'z-companion-notice', Z_COMPANION_PLUGIN_DIR_URL.'notify/assets/css/notice.css', array(), '1.0.0' );
 
 	}
-
-
-
-
+	
 	function set_cookie() { 
  
 		$visit_time = date('F j, Y  g:i a');
@@ -46,9 +43,7 @@ class ThemeHunk_Notify{
 		setcookie('thc_time', $cok_time, time()+(86457*30));
 			 
 		}
- 
 	}
-
 		function unset_cookie(){
 
 			$visit_time = time();
@@ -66,12 +61,10 @@ class ThemeHunk_Notify{
 
           require_once Z_COMPANION_DIR_PATH . 'notify/notify-html.php'; 
 
-
  } 
-
 
 }
 
 $obj = New ThemeHunk_Notify();
 
- } // if class end ?>
+ } // if class end 
