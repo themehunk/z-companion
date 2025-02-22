@@ -32,6 +32,7 @@ Z-Companion plugin is specially made for wpzita themes.This plugin boost up feat
 * Update: Patchstack security issue resolved.
 * Update: Plugin tested with WordPress 6.7.
 * Fix: Import Libray working on every theme issue resolved.
+* Update: Api-key folder removed.
 
 = Version 1.0.13 =
 * Update: Th Shop Mania Banner added.
@@ -79,6 +80,7 @@ Z-Companion plugin is specially made for wpzita themes.This plugin boost up feat
 * Update: Patchstack security issue resolved.
 * Update: Plugin tested with WordPress 6.7.
 * Fix: Import Libray working on every theme issue resolved.
+* Update: Api-key folder removed.
 
 Thanks for using our plugin, I am sure you will create a great Product Search for your site. If you have any query then you can contact at our forum : https://www.support.themehunk.com/
 
