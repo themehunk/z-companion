@@ -17,7 +17,7 @@ if ( ! defined( 'ALLOW_UNFILTERED_UPLOADS' ) ) {
 }
 
 if ( ! defined( 'Z_COMPANION_SITES_NAME' ) ) {
-	define( 'Z_COMPANION_SITES_NAME', __( 'Z Companion Sites', 'zita-site-library' ) );
+	define( 'Z_COMPANION_SITES_NAME', __( 'Z Companion Sites', 'z-companion' ) );
 }
 
 if ( ! defined( 'Z_COMPANION_SITES_FILE' ) ) {
@@ -46,11 +46,9 @@ if ( ! function_exists( 'z_companion_site_setup' ) ) :
 	 *
 	 * @since 1.4.7
 	 */
-	function z_companion_site_setup() {
+
 	require_once Z_COMPANION_SITES_DIR . 'inc/zita-library-page.php';
 	require_once Z_COMPANION_SITES_DIR . 'inc/admin-load-page.php';
-	}
-
-	add_action( 'plugins_loaded', 'z_companion_site_setup' );
+	
 
 endif;

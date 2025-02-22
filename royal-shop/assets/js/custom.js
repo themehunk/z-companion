@@ -266,6 +266,7 @@
                                       url: royalshop_obj.ajaxUrl,
                                       data: {
                                         action :'z_companion_cat_filter_ajax',
+                                        security: royalshop_obj.security_nonce,
                                         'data_cat_slug':data_term_id,
                                        },
                                 dataType: 'html'

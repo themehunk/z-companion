@@ -3,7 +3,7 @@ Contributors: wpzita
 Donate link: https://wpzita.com/
 Tags: demo, theme demos, one click import
 Requires at least: 5.5
-Tested up to: 5.9
+Tested up to: 6.7
 Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -30,43 +30,56 @@ Z-Companion plugin is specially made for wpzita themes.This plugin boost up feat
 
 = Version 1.1.0 =
 * Update: Patchstack security issue resolved.
+* Update: Plugin tested with WordPress 6.7.
+* Fix: Import Libray working on every theme issue resolved.
 
 = Version 1.0.13 =
-* Th Shop Mania - Banner added.
+* Update: Th Shop Mania Banner added.
 
 = Version 1.0.12 =
-* Notify Updated.
+* Update Notify Updated.
 
 = Version 1.0.11 =
-* Product Image blur issue fixed.
+* Fix Product Image blur issue fixed.
 
 = Version 1.0.10 =
-* Notify added.
+* New: Notify added.
 
 = Version 1.0.9 =
-* bug fixed
+* Fix: bug fixed
 
 = Version 1.0.8 =
-* Demo import issue fixed.
+* Fix Demo import issue fixed.
 
 = Version 1.0.7 =
-* Customizer issue fixed.
+* Fix: Customizer issue fixed.
 
 = Version 1.0.6 =
-* Customizer error fixed.
+* Fix: Customizer error fixed.
 
 = Version 1.0.5 =
-* new feature added.
+* New: new feature added.
 
 = Version 1.0.3 =
-* demo import feature added.
+* New: demo import feature added.
 
 
 = Version 1.0.2 =
-* theme issue fixed.
+* New: theme issue fixed.
 
 = Version 1.0.1 =
-* banner and logo image added.
+* New: banner and logo image added.
 
 = Version 1.0.0 =
-* Initial release
+* New: Initial release
+
+== Upgrade Notice ==
+
+= Version 1.1.0 =
+* Update: Patchstack security issue resolved.
+* Update: Plugin tested with WordPress 6.7.
+* Fix: Import Libray working on every theme issue resolved.
+
+Thanks for using our plugin, I am sure you will create a great Product Search for your site. If you have any query then you can contact at our forum : https://www.support.themehunk.com/
+
+Thank You

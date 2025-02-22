@@ -241,6 +241,7 @@ function z_companion_localize_settings(){
 				'royal_shop_vt2_cat_slider_optn' => (bool) get_theme_mod('royal_shop_vt2_cat_slider_optn',false),
 				//category-filter
 				'royal_shop_cat_item_no'	=>	get_theme_mod('royal_shop_cat_item_no',9),
+				'security_nonce' => wp_create_nonce( 'royal-shop-ajax-noce' ),
 
 			);
 	return $royalshoplocalize;
