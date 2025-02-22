@@ -264,6 +264,15 @@ class Z_Companion_Sites_Ajax{
 		 */
 		function import_customizer_settings() {
 
+			if (!current_user_can('manage_options')) {
+				exit;
+			}
+
+			if (!isset($_POST['security']) || !wp_verify_nonce($_POST['security'], 'z-companion-sites')) {
+				           return;
+			}
+
+
 			$customizer_data = ( isset( $_POST['customizer_data'] ) ) ? (array) json_decode( stripcslashes( $_POST['customizer_data'] ), 1 ) : '';
 
 			if ( isset( $customizer_data ) ) {

@@ -4,7 +4,7 @@ Donate link: https://wpzita.com/
 Tags: demo, theme demos, one click import
 Requires at least: 5.5
 Tested up to: 5.9
-Stable tag: 1.0.13
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,6 +27,9 @@ Z-Companion plugin is specially made for wpzita themes.This plugin boost up feat
 4. View website.
 
 == Changelog ==
+
+= Version 1.1.0 =
+* Update: Patchstack security issue resolved.
 
 = Version 1.0.13 =
 * Th Shop Mania - Banner added.

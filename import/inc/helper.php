@@ -193,7 +193,7 @@ if ( ! class_exists( 'Z_Companion_Sites_Helper' ) ) :
 		}
 
 		// Add Custom CSS.
-		if ( isset( $options['custom-css'] ) ) {
+		if ( current_user_can('manage_options') && isset( $options['custom-css'] ) ) {
 			wp_update_custom_css_post( $options['custom-css'] );
 		}
 
@@ -210,6 +210,12 @@ if ( ! class_exists( 'Z_Companion_Sites_Helper' ) ) :
 	 * @return void
 	 */
 static public function _import_settings( $options = array() ) {
+
+	 // Verify current user has admin or customize capabilities
+	 if ( ! current_user_can( 'manage_options' ) ) {
+        wp_die( __( 'Unauthorized action.', 'your-text-domain' ), 403 );
+    }
+
 
 		$theme_mods = 'theme_mods_'.get_option('stylesheet');
 
