@@ -78,15 +78,7 @@ static public function add_admin_menu() {
 
 		static public function general_page() {
 
-			if(isset($_GET['site-key'])){
-
-			require_once Z_COMPANION_SITES_DIR . 'inc/key-api/form.php';
-			
-			}else {
-
 			require_once Z_COMPANION_SITES_DIR . 'inc/admin-tmpl.php';
-
-			}
 
 		}
 }
