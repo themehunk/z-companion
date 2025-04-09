@@ -60,6 +60,7 @@ class Z_Companion_Sites_WXR_Importer {
 		}
 
 		add_filter( 'upload_mimes', array( $this, 'custom_upload_mimes' ) );
+		add_filter( 'wp_handle_upload_prefilter', array( $this, 'sanitize_svg_upload' ) );
 		add_action( 'wp_ajax_zita-wxr-import', array( $this, 'sse_import' ) );
 		add_filter( 'wxr_importer.pre_process.user', '__return_null' );
 	}
@@ -146,16 +147,89 @@ class Z_Companion_Sites_WXR_Importer {
 	 * @param array $mimes Already supported mime types.
 	 */
 	public function custom_upload_mimes( $mimes ) {
-
+		if ( current_user_can( 'manage_options' ) ) {
 		// Allow SVG files.
 		$mimes['svg']  = 'image/svg+xml';
 		$mimes['svgz'] = 'image/svg+xml';
 
 		// Allow XML files.
 		$mimes['xml'] = 'application/xml';
+		}
 
 		return $mimes;
 	}
+	
+	// Add file content sanitization filter (for SVG)
+public function sanitize_svg_upload( $file ) {
+	if (
+		isset( $file['type'] ) &&
+		in_array( $file['type'], array( 'image/svg+xml' ) ) &&
+		current_user_can( 'manage_options' )
+	) {
+		// Read file content
+		$svg_contents = file_get_contents( $file['tmp_name'] );
+
+		// Sanitize using wp_kses
+		$clean_svg = wp_kses( $svg_contents, $this->get_svg_allowed_html() );
+
+		// Overwrite file contents with sanitized SVG
+		file_put_contents( $file['tmp_name'], $clean_svg );
+	}
+
+	return $file;
+}
+
+
+// Define allowed SVG elements and attributes
+public function get_svg_allowed_html() {
+	$allowed_html = wp_kses_allowed_html( 'post' );
+
+	$allowed_html['svg'] = array(
+		'xmlns' => true,
+		'viewBox' => true,
+		'width' => true,
+		'height' => true,
+		'fill' => true,
+		'stroke' => true,
+		'version' => true,
+		'id' => true,
+		'class' => true,
+		'aria-hidden' => true,
+	);
+
+	$allowed_html['g'] = array(
+		'fill' => true,
+		'stroke' => true,
+		'transform' => true,
+		'class' => true,
+		'id' => true,
+	);
+
+	$allowed_html['path'] = array(
+		'd' => true,
+		'fill' => true,
+		'stroke' => true,
+		'stroke-width' => true,
+		'transform' => true,
+	);
+
+	$allowed_html['circle'] = array(
+		'cx' => true,
+		'cy' => true,
+		'r'  => true,
+		'fill' => true,
+	);
+
+	$allowed_html['rect'] = array(
+		'x' => true,
+		'y' => true,
+		'width' => true,
+		'height' => true,
+		'fill' => true,
+	);
+
+	return $allowed_html;
+}
 
 	/**
 	 * Start the xml import.
