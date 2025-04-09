@@ -3,7 +3,7 @@
  * Plugin Name: Z Companion
  * Plugin URI: https://wpzita.com/z-companion
  * Description: Z-Companion plugin is specially made for wpzita themes.This plugin boost up features in the theme.
- * Version: 1.1.1
+ * Version: 1.1.2
  * Author: WPZita
  * Author URI: https://wpzita.com
  * Requires at least: 5.0
@@ -14,7 +14,7 @@
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) exit;
 // Version constant for easy CSS refreshes
-define('Z_COMPANION', '1.1.1');
+define('Z_COMPANION', '1.1.2');
 define('Z_COMPANION_EXT_FILE', __FILE__ );
 define('Z_COMPANION_PLUGIN_DIR_URL', plugin_dir_url(Z_COMPANION_EXT_FILE));
 define('Z_COMPANION_BASENAME', plugin_basename(Z_COMPANION_EXT_FILE) );
