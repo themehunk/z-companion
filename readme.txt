@@ -1,10 +1,9 @@
 === Z Companion ===
 Contributors: wpzita
-Donate link: https://wpzita.com/
 Tags: demo, theme demos, one click import
 Requires at least: 5.5
 Tested up to: 6.7
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,9 +27,12 @@ Z-Companion plugin is specially made for wpzita themes.This plugin boost up feat
 
 == Changelog ==
 
-= Version 1.1.1 =
+= Version 1.1.2 =
 * Update: add_filter( 'wp_handle_upload_prefilter', array( $this, 'sanitize_svg_upload' ) ); added for svg sanitization.
 * Fix: Sanitization applied to XML files either.
+
+= Version 1.1.1 =
+* plugin tested with lates WordPress.
 
 
 = Version 1.1.0 =
@@ -81,7 +83,7 @@ Z-Companion plugin is specially made for wpzita themes.This plugin boost up feat
 
 == Upgrade Notice ==
 
-= Version 1.1.1 =
+= Version 1.1.2 =
 * Update: add_filter( 'wp_handle_upload_prefilter', array( $this, 'sanitize_svg_upload' ) ); added for svg sanitization.
 * Fix: Sanitization applied to XML files either.
 
